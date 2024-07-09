@@ -1,0 +1,329 @@
+{
+    "http_code": 200,
+    "response_code": "SUCCESS",
+    "response_msg": "Here are your contact lists.",
+    "data": {
+        "total": 39,
+        "per_page": 500,
+        "current_page": 1,
+        "last_page": 1,
+        "next_page_url": null,
+        "prev_page_url": null,
+        "from": 1,
+        "to": 39,
+        "data": [
+            {
+                "list_id": 2605071,
+                "list_name": "Opt-Out List",
+                "list_email_id": "RDRASIA3BJCRRAPF",
+                "_contacts_count": 0,
+                "_import_in_progress": 0,
+                "_optout_in_progress": 0
+            },
+            {
+                "list_id": 2605072,
+                "list_name": "Example List",
+                "list_email_id": "DKCCAESOYO4Y3BNO",
+                "_contacts_count": 1,
+                "_import_in_progress": 0,
+                "_optout_in_progress": 0
+            },
+            {
+                "list_id": 2617295,
+                "list_name": "Messenger",
+                "list_email_id": "WTN6TI1JKBY6OQIN",
+                "_contacts_count": 1,
+                "_import_in_progress": 0,
+                "_optout_in_progress": 0
+            },
+            {
+                "list_id": 2643707,
+                "list_name": "others_week_01",
+                "list_email_id": "YHB79P5D66FRGLNE",
+                "_contacts_count": 3,
+                "_import_in_progress": 0,
+                "_optout_in_progress": 0
+            },
+            {
+                "list_id": 2653847,
+                "list_name": "others_week_02",
+                "list_email_id": "FAVWLSZW34COOS9P",
+                "_contacts_count": 5,
+                "_import_in_progress": 0,
+                "_optout_in_progress": 0
+            },
+            {
+                "list_id": 2663490,
+                "list_name": "others_week_03",
+                "list_email_id": "QPDORIAYQAZVEYK4",
+                "_contacts_count": 7,
+                "_import_in_progress": 0,
+                "_optout_in_progress": 0
+            },
+            {
+                "list_id": 2665023,
+                "list_name": "My Contact List TEST",
+                "list_email_id": "QFSVCDZ8ADIMYYVB",
+                "_contacts_count": 0,
+                "_import_in_progress": 0,
+                "_optout_in_progress": 0
+            },
+            {
+                "list_id": 2665024,
+                "list_name": "My Contact List TEST",
+                "list_email_id": "WYYPXEW5CYEXDHLY",
+                "_contacts_count": 0,
+                "_import_in_progress": 0,
+                "_optout_in_progress": 0
+            },
+            {
+                "list_id": 2665025,
+                "list_name": "My Contact List TEST",
+                "list_email_id": "NMIPVPY4QHAN15MP",
+                "_contacts_count": 0,
+                "_import_in_progress": 0,
+                "_optout_in_progress": 0
+            },
+            {
+                "list_id": 2665026,
+                "list_name": "My Contact List TEST",
+                "list_email_id": "NULMFLFCYU82JQXL",
+                "_contacts_count": 0,
+                "_import_in_progress": 0,
+                "_optout_in_progress": 0
+            },
+            {
+                "list_id": 2665028,
+                "list_name": "My Contact List TEST",
+                "list_email_id": "QBOGZRUS0P8CJX31",
+                "_contacts_count": 0,
+                "_import_in_progress": 0,
+                "_optout_in_progress": 0
+            },
+            {
+                "list_id": 2665030,
+                "list_name": "My Contact List TEST",
+                "list_email_id": "YLVQ3BEKVECLOS0L",
+                "_contacts_count": 0,
+                "_import_in_progress": 0,
+                "_optout_in_progress": 0
+            },
+            {
+                "list_id": 2665041,
+                "list_name": "My Contact List TEST",
+                "list_email_id": "J8UW5NTHGD8MGOSV",
+                "_contacts_count": 0,
+                "_import_in_progress": 0,
+                "_optout_in_progress": 0
+            },
+            {
+                "list_id": 2665043,
+                "list_name": "My Contact List TEST",
+                "list_email_id": "TMPRWRGRAXO9MRYD",
+                "_contacts_count": 0,
+                "_import_in_progress": 0,
+                "_optout_in_progress": 0
+            },
+            {
+                "list_id": 2665045,
+                "list_name": "My Contact List TEST",
+                "list_email_id": "SSTG5I9LXF3DSGPD",
+                "_contacts_count": 0,
+                "_import_in_progress": 0,
+                "_optout_in_progress": 0
+            },
+            {
+                "list_id": 2665046,
+                "list_name": "My Contact List TEST",
+                "list_email_id": "CQG6IZRGAAJE7ZVK",
+                "_contacts_count": 0,
+                "_import_in_progress": 0,
+                "_optout_in_progress": 0
+            },
+            {
+                "list_id": 2665047,
+                "list_name": "My Contact List TEST",
+                "list_email_id": "UONZ55L33BW0Y3QX",
+                "_contacts_count": 0,
+                "_import_in_progress": 0,
+                "_optout_in_progress": 0
+            },
+            {
+                "list_id": 2665048,
+                "list_name": "My Contact List TEST",
+                "list_email_id": "OZIEQL0CAUJPY5YR",
+                "_contacts_count": 0,
+                "_import_in_progress": 0,
+                "_optout_in_progress": 0
+            },
+            {
+                "list_id": 2665049,
+                "list_name": "My Contact List TEST",
+                "list_email_id": "8Q09OONEZAKWULVG",
+                "_contacts_count": 0,
+                "_import_in_progress": 0,
+                "_optout_in_progress": 0
+            },
+            {
+                "list_id": 2665051,
+                "list_name": "My Contact List TEST",
+                "list_email_id": "7XVDWPDKSNADQKDA",
+                "_contacts_count": 0,
+                "_import_in_progress": 0,
+                "_optout_in_progress": 0
+            },
+            {
+                "list_id": 2665052,
+                "list_name": "My Contact List TEST",
+                "list_email_id": "0Q72RKUZHGXSXLCQ",
+                "_contacts_count": 0,
+                "_import_in_progress": 0,
+                "_optout_in_progress": 0
+            },
+            {
+                "list_id": 2665053,
+                "list_name": "My Contact List TEST",
+                "list_email_id": "NDQHDHP8NPRHSPAH",
+                "_contacts_count": 0,
+                "_import_in_progress": 0,
+                "_optout_in_progress": 0
+            },
+            {
+                "list_id": 2665054,
+                "list_name": "My Contact List TEST",
+                "list_email_id": "TT9FBJMILCW7EP89",
+                "_contacts_count": 0,
+                "_import_in_progress": 0,
+                "_optout_in_progress": 0
+            },
+            {
+                "list_id": 2665057,
+                "list_name": "My Contact List TEST",
+                "list_email_id": "QEXECATZCTZONQCE",
+                "_contacts_count": 0,
+                "_import_in_progress": 0,
+                "_optout_in_progress": 0
+            },
+            {
+                "list_id": 2665058,
+                "list_name": "My Contact List TEST",
+                "list_email_id": "DCU7NF9SJUOJXDQB",
+                "_contacts_count": 0,
+                "_import_in_progress": 0,
+                "_optout_in_progress": 0
+            },
+            {
+                "list_id": 2665083,
+                "list_name": "My Contact List TEST",
+                "list_email_id": "7YIWAFSSBVQC9ZAX",
+                "_contacts_count": 0,
+                "_import_in_progress": 0,
+                "_optout_in_progress": 0
+            },
+            {
+                "list_id": 2665084,
+                "list_name": "My Contact List TEST",
+                "list_email_id": "CMVHMMDMPZNEMYQL",
+                "_contacts_count": 0,
+                "_import_in_progress": 0,
+                "_optout_in_progress": 0
+            },
+            {
+                "list_id": 2665085,
+                "list_name": "My Contact List TEST",
+                "list_email_id": "3C3TYBSABAG1NNGT",
+                "_contacts_count": 0,
+                "_import_in_progress": 0,
+                "_optout_in_progress": 0
+            },
+            {
+                "list_id": 2665086,
+                "list_name": "My Contact List TEST",
+                "list_email_id": "NFLB6D00GOQ8IOFN",
+                "_contacts_count": 0,
+                "_import_in_progress": 0,
+                "_optout_in_progress": 0
+            },
+            {
+                "list_id": 2665087,
+                "list_name": "My Contact List TEST",
+                "list_email_id": "OMWAOYSX1SQZGC1U",
+                "_contacts_count": 0,
+                "_import_in_progress": 0,
+                "_optout_in_progress": 0
+            },
+            {
+                "list_id": 2665091,
+                "list_name": "My Contact List TEST",
+                "list_email_id": "IVLSYIM0UKNPOLQ3",
+                "_contacts_count": 0,
+                "_import_in_progress": 0,
+                "_optout_in_progress": 0
+            },
+            {
+                "list_id": 2665092,
+                "list_name": "My Contact List TEST",
+                "list_email_id": "WK9HSUXZUKGKAEDX",
+                "_contacts_count": 0,
+                "_import_in_progress": 0,
+                "_optout_in_progress": 0
+            },
+            {
+                "list_id": 2665096,
+                "list_name": "My Contact List TEST",
+                "list_email_id": "CWWW9780R0GG4ZKU",
+                "_contacts_count": 0,
+                "_import_in_progress": 0,
+                "_optout_in_progress": 0
+            },
+            {
+                "list_id": 2665097,
+                "list_name": "My Contact List TEST",
+                "list_email_id": "7CR63R6V6W0W36CJ",
+                "_contacts_count": 0,
+                "_import_in_progress": 0,
+                "_optout_in_progress": 0
+            },
+            {
+                "list_id": 2665098,
+                "list_name": "My Contact List TEST",
+                "list_email_id": "2K8XSYVZM7ZGNKXU",
+                "_contacts_count": 0,
+                "_import_in_progress": 0,
+                "_optout_in_progress": 0
+            },
+            {
+                "list_id": 2665099,
+                "list_name": "My Contact List TEST",
+                "list_email_id": "ENQQD4IACP4EDNVG",
+                "_contacts_count": 0,
+                "_import_in_progress": 0,
+                "_optout_in_progress": 0
+            },
+            {
+                "list_id": 2665100,
+                "list_name": "My Contact List TEST",
+                "list_email_id": "2OQKO8JD7HBIIADB",
+                "_contacts_count": 0,
+                "_import_in_progress": 0,
+                "_optout_in_progress": 0
+            },
+            {
+                "list_id": 2665101,
+                "list_name": "My Contact List TEST",
+                "list_email_id": "IJLGSOPV1YH4L2EN",
+                "_contacts_count": 0,
+                "_import_in_progress": 0,
+                "_optout_in_progress": 0
+            },
+            {
+                "list_id": 2665103,
+                "list_name": "My Contact List TEST",
+                "list_email_id": "ZC7K0ZBNUNREJZHG",
+                "_contacts_count": 0,
+                "_import_in_progress": 0,
+                "_optout_in_progress": 0
+            }
+        ]
+    }
+}
