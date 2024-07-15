@@ -35,7 +35,8 @@ try:
     
     # Add contacts to the contact list
     contacts = [
-        Contact(first_name='Angel', last_name='Magnossao', phone_number='+61431386743', custom_1='custom_value_1')
+        # Contact(first_name='Angel', last_name='Magnossao', phone_number='+61431386743', custom_1='custom_value_1')
+        Contact(phone_number='+61431386743', custom_1='custom_value_1')
     ]
 
     for contact in contacts:
@@ -55,9 +56,9 @@ try:
     sms_campaign = SmsCampaign(
         name='My SMS Campaign',
         list_id=contact_list_id,
-        _from='+61447056520',
+        _from='SafeDrive',
         schedule=0,
-        body='Hello, this is a test message!'
+        body='Hello, this is a test message!@'
     )
 
     # Send the SMS campaign
