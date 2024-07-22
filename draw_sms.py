@@ -26,8 +26,14 @@ class ClickSendSMS:
             self.configuration.username = self.username
             self.configuration.password = self.password
             print(f"Authorization successful.")
-        except:
+        
+        except ApiException as e:
             print("Authorization failed.")
+            print(f"Exception when calling API: {e}")
+        except Exception as e:
+            print("Authorization failed.")
+            print(f"General exception: {e}")
+            
         
     
     def load_data(self):
@@ -35,18 +41,30 @@ class ClickSendSMS:
             self.df_drow_participants = pd.read_csv(f'{self.data_folder_path}/{self.participants_file}.csv')
             self.df_drow_winners = pd.read_csv(f'{self.data_folder_path}/{self.participants_file}.csv')
             print(f"Data loaded successfully.")
-        except:
+            
+        except Exception as e:
             print("Failed to load data.")
+            print(f"General exception: {e}")
             
     
     def build_sms_text(self):
         try:
+            map_state_acronym= {'New South Wales': 'NSW',
+                                    'Queensland': 'QLD',
+                                    'South Australia':'SA',
+                                    'Western Australia':'WA',
+                                    'Victoria': 'VIC',}
+            
             trail_type = self.participants_file.split('_')[1].split('.')[0]
-            info_sms = self.df_drow_winners.loc[self.df_drow_winners['Trial'].str.contains(trail_type), ['Q4.6','Q4.7', 'Trial']].to_dict()
-            self.text_sms = f"Hi from DrivePoints! This week's winner is a driver from {int(info_sms['Q4.7'][0])}. Enable location access on the app for your chance to win next week."
+            info_sms = self.df_drow_winners.loc[self.df_drow_winners['Trial'].str.contains(trail_type), ['Q4.6','Q4.7']].to_dict()
+            text_sms_beginning = f"Hi from DrivePoints! This week's winner is a driver from {int(info_sms['Q4.7'][0])}, {map_state_acronym[info_sms['Q4.6'][0]]}."
+            text_sms_ending = f"Enable location access on the app for your chance to win next week."
+            self.text_sms = text_sms_beginning + " " + text_sms_ending
             print(f"SMS text successfully built.")
-        except:
+            
+        except Exception as e:
             print("Failed to build SMS text.")
+            print(f"General exception: {e}")
         
         
     def create_contact_list(self):
@@ -61,15 +79,24 @@ class ClickSendSMS:
             # Send the list throught the contact Api response
             self.contact_list_response = self.contact_list_api.lists_post(new_contact_list)
             print("Contact list created successfully.")
-        except:
+            
+        except ApiException as e:
             print("Failed to create contact list.")
+            print(f"Exception when calling API: {e}")
+        except Exception as e:
+            print("Failed to create contact list.")
+            print(f"General exception: {e}")
 
-        
-        
+
     def get_id_contact_list(self):
+        try:
         # Get contact list ID
-        contact_list_response_dictionary = ast.literal_eval(self.contact_list_response)
-        self.contact_list_id = contact_list_response_dictionary['data']['list_id']
+            contact_list_response_dictionary = ast.literal_eval(self.contact_list_response)
+            self.contact_list_id = contact_list_response_dictionary['data']['list_id']
+            
+        except Exception as e:
+            print("Failed to to get list ID.")
+            print(f"General exception: {e}")
 
 
     def add_participants_to_contact_list(self):
@@ -82,9 +109,13 @@ class ClickSendSMS:
                 response = contact_api.lists_contacts_by_list_id_post(contact, self.contact_list_id)
             
             print(f"{len(self.df_drow_participants)} participants added to contact list successfully.")
-        except:
-            print("Failed to add participants to contact list.")
             
+        except ApiException as e:
+            print("Failed to add participants to contact list.")
+            print(f"Exception when calling API: {e}")
+        except Exception as e:
+            print("Failed to add participants to contact list.")
+            print(f"General exception: {e}")
             
     def create_sms_campaign(self):
         try:
@@ -98,16 +129,27 @@ class ClickSendSMS:
                 _from='SafeDrive',
                 schedule=0,
                 body=self.text_sms)
-        except:
+            print(f"SMS campaign created successfully.")
+            
+        except ApiException as e:
             print("Failed to create SMS campaign.")
+            print(f"Exception when calling API: {e}")
+        except Exception as e:
+            print("Failed to create SMS campaign.")
+            print(f"General exception: {e}")
         
         
     def send_sms_campaign(self):
         try:
             api_response = self.sms_campaign_api.sms_campaigns_send_post(self.sms_campaign)
             print("SMS campaign sent successfully.")
-        except:
+                    
+        except ApiException as e:
             print("Failed to send SMS campaign.")
+            print(f"Exception when calling API: {e}")
+        except Exception as e:
+            print("Failed to send SMS campaign.")
+            print(f"General exception: {e}")
     
     
     def main(self):
@@ -125,20 +167,23 @@ if __name__ == '__main__':
     # Load environment variables from .env file
     load_dotenv()
     
-    try:
+    # try:
         
-        # for file_name in ['participants_feedback', 'participants_smart']: # TODO: uncomment line with actual file names
-        for file_name in ['participants_test']: #TODO: delete line with test file name
-            # Create an instance of the ClickSendSMS class
-            clicksend_sms = ClickSendSMS(username = os.environ.get('USERNAME'), #TODO: replace with actual username and password
-                                            password = os.environ.get('PASSWORD'),#TODO: replace with actual username and password
-                                            data_folder_path= os.getcwd() + '/data', #TODO: replace with actual data folder path
-                                            participants_file=file_name,
-                                            winners_file='selected_participants')
-            
-            clicksend_sms.main()
+    for file_name in ['participants_feedback', 'participants_smart', 'participants_internal']: # TODO: uncomment line with actual file names
+    # for file_name in ['participants_internals']: #TODO: delete line with test file name
+        winners_file =  'selected_' + ('internals' if 'internals' in file_name else 'participants')
+        
+        # Create an instance of the ClickSendSMS class
+        clicksend_sms = ClickSendSMS(username = os.environ.get('USERNAME'), #TODO: replace with actual username and password
+                                        password = os.environ.get('PASSWORD'),#TODO: replace with actual username and password
+                                        data_folder_path= os.getcwd() + '/data', #TODO: replace with actual data folder path
+                                        participants_file=file_name,
+                                        winners_file= winners_file)
+        
+        clicksend_sms.main()
+        print("-----------------------------------------")
 
-    except ApiException as e:
-        print(f"Exception when calling API: {e}")
-    except Exception as e:
-        print(f"General exception: {e}")
+    # except ApiException as e:
+    #     print(f"Exception when calling API: {e}")
+    # except Exception as e:
+    #     print(f"General exception: {e}")

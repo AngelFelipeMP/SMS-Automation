@@ -1,6 +1,7 @@
 # SMS-Automation
 .env
 data
+authentication.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
