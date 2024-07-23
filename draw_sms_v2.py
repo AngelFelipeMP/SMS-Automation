@@ -150,14 +150,15 @@ if __name__ == '__main__':
     trail_list = []
 
     # check information config
-    if not args.smart and not args.feedback:
-        print('Must specify either --feedback or/and --smart')
-        exit(1)
-    
-    if args.feedback:
+    if (not args.smart and not args.feedback) or (args.smart and args.feedback):
+        # print('I may specify --feedback or/and --smart')
         trail_list.append('feedback')
+        trail_list.append('smart')
         
-    if args.smart:
+    elif args.feedback:
+        trail_list.append('feedback')
+            
+    elif args.smart:
         trail_list.append('smart')
         
         
@@ -181,3 +182,7 @@ if __name__ == '__main__':
         
         clicksend_sms.main()
         print("-----------------------------------------")
+        
+        
+        
+        #TODO:  by deful we send the sms for the two groups, use the flags to send only one group
